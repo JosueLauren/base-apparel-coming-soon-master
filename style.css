@@ -68,6 +68,7 @@ p.parágrafo {
 
 form.formulário {
     display: flex;
+    margin-bottom: 5px;
 }
 
 input.entrada-email {
@@ -76,10 +77,13 @@ input.entrada-email {
     border-radius: 20px;
     padding-left: 15px;
     outline: none;
+    border: 1px solid var(--tree);
+}
+
+.email-inválido {
     background-image: url(images/icon-error.svg);
     background-repeat: no-repeat;
     background-position: center right 40px;
-    border: 1px solid var(--tree);
 }
 
 input::placeholder {

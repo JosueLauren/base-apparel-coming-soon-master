@@ -33,4 +33,25 @@
     </p>
   </footer>
 </body>
+<script>
+    const btn = document.querySelector('.btn')
+    const email = document.querySelector('#email')
+    const conteudo = document.querySelector('.descrição')
+
+    btn.addEventListener('click', (event) => {
+      event.preventDefault()
+      if(!email.value.trim().includes('@')){
+        const msg = document.createElement('p')
+        msg.innerText = "Please provide o valid email"
+        msg.style.color = "hsl(0, 74%, 74%)"
+        msg.style.marginLeft = "20px"
+        msg.style.fontSize = "14px"
+        conteudo.appendChild(msg)
+        email.style.borderColor = "hsl(0, 93%, 68%)"
+        email.classList.add('email-inválido')
+
+        return 
+      }
+    })
+</script>
 </html>
