@@ -78,6 +78,7 @@ input.entrada-email {
     padding-left: 15px;
     outline: none;
     border: 1px solid var(--tree);
+    border-right-color: transparent;
 }
 
 .email-inválido {
@@ -105,6 +106,10 @@ button.btn {
     border: none;
     box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.3);
     
+}
+
+button.btn:hover {
+    opacity: 0.8;
 }
 
 div.div-imagem {

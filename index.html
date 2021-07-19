@@ -40,8 +40,10 @@
 
     btn.addEventListener('click', (event) => {
       event.preventDefault()
+
+      const msg = document.createElement('p')
+
       if(!email.value.trim().includes('@')){
-        const msg = document.createElement('p')
         msg.innerText = "Please provide o valid email"
         msg.style.color = "hsl(0, 74%, 74%)"
         msg.style.marginLeft = "20px"
@@ -50,8 +52,13 @@
         email.style.borderColor = "hsl(0, 93%, 68%)"
         email.classList.add('email-inválido')
 
-        return 
+        setTimeout(() => {
+          msg.remove()
+          email.classList.remove('email-inválido')
+
+        }, 3000)
       }
+
     })
 </script>
 </html>
