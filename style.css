@@ -78,7 +78,6 @@ input.entrada-email {
     padding-left: 15px;
     outline: none;
     border: 1px solid var(--tree);
-    border-right-color: transparent;
 }
 
 .email-inválido {
@@ -109,7 +108,7 @@ button.btn {
 }
 
 button.btn:hover {
-    opacity: 0.8;
+    background-image: linear-gradient(to right, var(--Desaturated-Red), var(--Soft-Red));
 }
 
 div.div-imagem {
