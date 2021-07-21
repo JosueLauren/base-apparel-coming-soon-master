@@ -50,9 +50,10 @@
           msg.style.color = "hsl(0, 74%, 74%)"
           msg.style.marginLeft = "20px"
           msg.style.fontSize = "14px"
-          conteudo.appendChild(msg)
+          msg.setAttribute('id','msg-erro')
           email.style.borderColor = "hsl(0, 93%, 68%)"
           email.classList.add('email-inválido')
+          if(!document.querySelector('#msg-erro')) conteudo.appendChild(msg)
     
         setTimeout(() => {
           msg.remove()
@@ -60,7 +61,21 @@
           email.style.borderColor = "hsl(0, 80%, 86%)"
 
         }, 3000)
+
+        return 
       }
+
+      email.value = ''
+      const msgSucesso = document.createElement('p')
+      msgSucesso.style.color = 'green'
+      msgSucesso.style.marginLeft = '20px'
+      msgSucesso.style.fontSize = '14px'
+      msgSucesso.innerText = "E-mail enviado com sucesso!!!"
+      document.querySelector('.formulário').style.display = 'none'
+
+      setTimeout(() => {
+        conteudo.appendChild(msgSucesso)
+      },1000)
 
     })
 </script>
